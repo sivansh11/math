@@ -1,9 +1,9 @@
-#ifndef GEOMETRY_TRIANGLE_HPP
-#define GEOMETRY_TRIANGLE_HPP
+#ifndef MATH_TRIANGLE_HPP
+#define MATH_TRIANGLE_HPP
 
-#include "geometry/aabb.hpp"
+#include "math/aabb.hpp"
 
-namespace geometry {
+namespace math {
 
 struct triangle_t {
   aabb_t aabb() const { return aabb_t{}.grow(v0).grow(v1).grow(v2); }
@@ -11,6 +11,6 @@ struct triangle_t {
   vec3 v0, v1, v2;
 };
 
-} // namespace geometry
+} // namespace math
 
-#endif // !TRIANGLE_HPP
+#endif // !MATH_TRIANGLE_HPP

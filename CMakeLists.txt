@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.10)
 
-project(geometry)
+project(math)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_CXX_STANDARD 20)
@@ -21,17 +21,17 @@ endif()
 
 file(GLOB_RECURSE SRC_FILES src/*cpp)
 
-add_library(geometry ${SRC_FILES})
+add_library(math ${SRC_FILES})
 
-target_link_libraries(geometry
+target_link_libraries(math
   PUBLIC glm
 )
 
-target_include_directories(geometry
+target_include_directories(math
   PUBLIC includes
 )
 
-if (GEOMETRY_BUILD_EXAMPLES)
+if (MATH_BUILD_EXAMPLES)
   add_subdirectory(examples)
 endif()
 

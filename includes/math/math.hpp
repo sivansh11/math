@@ -1,5 +1,5 @@
-#ifndef GEOMETRY_MATH_HPP
-#define GEOMETRY_MATH_HPP
+#ifndef MATH_HPP
+#define MATH_HPP
 
 #define GLM_ENABLE_EXPERIMENTAL
 #define GLM_DEPTH_ZERO_TO_ONE
@@ -9,12 +9,12 @@
 #include <glm/gtx/quaternion.hpp>
 #include <glm/gtx/string_cast.hpp>
 
-namespace geometry {
+namespace math {
 
 using namespace glm;
 
 static constexpr float infinity = std::numeric_limits<float>::max();
 
-} // namespace geometry
+} // namespace math
 
-#endif // !GEOMETRY_MATH_HPP
+#endif // !MATH_HPP

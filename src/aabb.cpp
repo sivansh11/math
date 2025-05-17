@@ -1,6 +1,6 @@
-#include "geometry/aabb.hpp"
+#include "math/aabb.hpp"
 
-namespace geometry {
+namespace math {
 
 bool aabb_t::is_valid() const {
   return min != glm::vec3{infinity} && max != glm::vec3{-infinity};
@@ -29,9 +29,9 @@ aabb_t &aabb_t::grow(const aabb_t &aabb) {
   return *this;
 }
 
-} // namespace geometry
+} // namespace math
 
-std::ostream &operator<<(std::ostream &o, const geometry::aabb_t &aabb) {
+std::ostream &operator<<(std::ostream &o, const math::aabb_t &aabb) {
   o << "aabb:\n\tmin: " << glm::to_string(aabb.min)
     << "\n\tmax: " << glm::to_string(aabb.max);
   return o;

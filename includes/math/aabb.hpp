@@ -1,13 +1,13 @@
-#ifndef GEOMETRY_AABB_HPP
-#define GEOMETRY_AABB_HPP
+#ifndef MATH_AABB_HPP
+#define MATH_AABB_HPP
 
 #include <cassert>
 #include <limits>
 #include <ostream>
 
-#include "geometry/math.hpp"
+#include "math/math.hpp"
 
-namespace geometry {
+namespace math {
 
 struct aabb_t {
   bool is_valid() const;
@@ -21,8 +21,8 @@ struct aabb_t {
   glm::vec3 max{-infinity};
 };
 
-} // namespace geometry
+} // namespace math
 
-std::ostream &operator<<(std::ostream &o, const geometry::aabb_t &aabb);
+std::ostream &operator<<(std::ostream &o, const math::aabb_t &aabb);
 
-#endif // !GEOMETRY_AABB_HPP
+#endif // !MATH_AABB_HPP
