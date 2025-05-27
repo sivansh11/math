@@ -19,8 +19,8 @@ static constexpr float infinity = std::numeric_limits<float>::max();
 
 } // namespace math
 
-std::ostream &operator<(std::ostream &o, const math::vec2 &v);
-std::ostream &operator<(std::ostream &o, const math::vec3 &v);
-std::ostream &operator<(std::ostream &o, const math::vec4 &v);
+std::ostream &operator<<(std::ostream &o, const math::vec2 &v);
+std::ostream &operator<<(std::ostream &o, const math::vec3 &v);
+std::ostream &operator<<(std::ostream &o, const math::vec4 &v);
 
 #endif // !MATH_HPP
