@@ -1,6 +1,8 @@
 #ifndef MATH_TRIANGLE_HPP
 #define MATH_TRIANGLE_HPP
 
+#include <ostream>
+
 #include "math/aabb.hpp"
 
 namespace math {
@@ -12,5 +14,7 @@ struct triangle_t {
 };
 
 } // namespace math
+
+std::ostream &operator<<(std::ostream &o, const math::triangle_t &triangle);
 
 #endif // !MATH_TRIANGLE_HPP
