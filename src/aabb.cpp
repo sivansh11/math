@@ -16,7 +16,7 @@ float aabb_t::largest_extent() const {
 float aabb_t::area() const {
   assert(is_valid());
   const glm::vec3 e = extent();
-  return (e.x * e.y + e.y * e.z + e.z * e.x);
+  return (e.x * e.y + e.y * e.z + e.z * e.x) * 2.f;
 }
 glm::vec3 aabb_t::center() const {
   assert(is_valid());
