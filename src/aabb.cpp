@@ -29,6 +29,10 @@ uint32_t aabb_t::largest_axis() const {
   if (e[axis] < e[2]) axis = 2;
   return axis;
 }
+bool aabb_t::intersects(const aabb_t &aabb) const {
+  return min.x < aabb.max.x && min.y < aabb.max.y && min.z < aabb.max.z &&
+         max.x > aabb.min.x && max.y > aabb.min.y && max.z > aabb.min.z;
+}
 aabb_t &aabb_t::grow(const vec3 &point) {
   min = math::min(min, point);
   max = math::max(max, point);

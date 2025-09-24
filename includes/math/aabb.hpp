@@ -16,6 +16,7 @@ struct aabb_t {
   float    area() const;
   vec3     center() const;
   uint32_t largest_axis() const;
+  bool     intersects(const aabb_t &aabb) const;
   aabb_t  &grow(const glm::vec3 &point);
   aabb_t  &grow(const aabb_t &aabb);
   aabb_t  &shrink(const aabb_t &aabb);
