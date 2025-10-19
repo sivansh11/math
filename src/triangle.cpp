@@ -10,6 +10,12 @@ float triangle_t::area() const {
   return math::length(math::cross(e1, e2)) * 0.5f;
 }
 
+vec3 triangle_t::normal() const {
+  vec3 e1 = v1 - v0;
+  vec3 e2 = v2 - v0;
+  return math::normalize(math::cross(e1, e2));
+}
+
 math::vec3 split_edge(const math::vec3 a, const math::vec3 b, uint32_t axis,
                       float position) {
   float t = (position - a[axis]) / (b[axis] - a[axis]);
